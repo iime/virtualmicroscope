@@ -56,12 +56,15 @@
 
 <p>To run the conversion command below, you will need to intall the libvips library (<a href="http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS">http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS</a>).  Newer versions of VIPS make the process of converting digital slides into the Google Maps format much easier and much, much faster. John Cupitt has written an excellent summary guide here: Making DeepZoom, Zoomify and Google Maps image pyramids with vips.</p>
 
-<p>On Ubuntu or Mint, you can install with:
-<code>sudo apt-get install libvips</code>
-<code>sudo apt-get install libvips-tools</code></p>
+<p>On Ubuntu or Mint, you can install with:</p>
 
-<p>Once you have VIPS and all its dependencies installed, you can now convert a scanned slide by simply executing the command:
-<code>vips dzsave name_of_slide_file.svs name_of_output_directory.zip  --background 0 --centre --layout google</code></p>
+<p><code>sudo apt-get install libvips</code></p>
+
+<p><code>sudo apt-get install libvips-tools</code></p>
+
+<p>Once you have VIPS and all its dependencies installed, you can now convert a scanned slide by simply executing the command:</p>
+
+<p><code>vips dzsave name_of_slide_file.svs name_of_output_directory.zip  --background 0 --centre --layout google</code></p>
 
 <p>This single line converts the slide, adds a black background, creates a Google Map tile set, and compresses it all into a zip file.  This zip file can then be uploaded to your public-facing web file server, expanded, and then used in your custom Google Maps code.   </p>
 
