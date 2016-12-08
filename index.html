@@ -64,8 +64,23 @@ sudo apt-get install libvips-tools</code></pre>
 <hr>
 
 <h3>Viewing your map tiles using the Leaflet JS Engine</h3>
-coming soon...
 
+
+<a href="http://leafletjs.com/">Leaflet</a> is an open source javascript mapping engine.  It is natively compatible with the Google Maps tile sets and annotations used previously by the Virtual Microscope.   In addition to being free, having a CDN or local installs, it also has a <a href="http://leafletjs.com/plugins.html">robust set of plugins</a>.
+<br><br>
+You can see example code and more on their <a href="http://leafletjs.com/examples.html">Tutorials Page</a>.
+<br><br>
+The key configuration to use our tile sets with Leaflet is to define the map's Tile Layer url format.  Here is an example from the NYU system:
+
+<pre><code>
+var slide_url_format = "{{path to the slide directory}}/tile_{z}_{x}_{y}.jpg"
+
+L.tileLayer(slide_url_format, {
+  attribution: 'Slide images property and copyright YOUR NAME HERE',
+  minZoom:2,
+  maxZoom:8
+}).addTo(map);
+</code></pre>
 
 <hr>
 
