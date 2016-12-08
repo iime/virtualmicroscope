@@ -63,6 +63,12 @@ sudo apt-get install libvips-tools</code></pre>
 
 <hr>
 
+<h3>Viewing your map tiles using the Leaflet JS Engine</h3>
+coming soon...
+
+
+<hr>
+
 <h3>Viewing your map tiles using the Google Maps API</h3>
 
 <p>Within Google maps you need a custom Javascript function to tell the Maps API how to load your slide images (more about that here <a href="https://developers.google.com/maps/documentation/javascript/maptypes">https://developers.google.com/maps/documentation/javascript/maptypes</a> ).</p>
@@ -77,8 +83,7 @@ sudo apt-get install libvips-tools</code></pre>
 <h5>Creating the web-viewer HTML:</h5>
 
 This is a code snippet to create an HTML page with a slide viewer that uses a converted slide from the script above. This snippet is just a simple viewer with navigation but no markers or other types of annotations. In combination with the slide converter above, you could use this as a template to build your own database-driven viewer system.   You will need to sign up for a Google Maps API key to run this.
-<pre><code>
-        <html><head>
+<textarea style="width:100%" rows="40"><html><head>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
         <script type="text/javascript">
         var map;
@@ -114,8 +119,7 @@ This is a code snippet to create an HTML page with a slide viewer that uses a co
         <body id="body" style="margin:0px; padding:0px; overflow: hidden;" onLoad="initialize()" >
         <div id="map_canvas" style="width:100%; height: 100%;"></div>
         </body>
-        </html>
-</code></pre>
+        </html></textarea>
 
 
 
