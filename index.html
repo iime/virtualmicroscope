@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Virtualmicroscope</title>
+    <title>Virtual Microscope</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/iime/virtualmicroscope">View on GitHub</a>
 
-          <h1 id="project_title">Virtualmicroscope</h1>
+          <h1 id="project_title">Virtual Microscope</h1>
           <h2 id="project_tagline">NYU School of Medicine Virtual Microscope Application</h2>
 
         </header>
@@ -46,20 +46,18 @@
 <hr>
 
 <h3>
-<a id="converting-aperio-slides-for-use-with-google-maps" class="anchor" href="#converting-aperio-slides-for-use-with-google-maps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Converting Aperio slides for use with Google Maps:</h3>
+<a id="converting-aperio-slides-for-use-with-google-maps" class="anchor" href="#converting-aperio-slides-for-use-with-google-maps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Converting Aperio slides for use with a Javascript mapping engine:</h3>
 
 <p>To run the conversion command below, you will need to intall the libvips library (<a href="http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS">http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS</a>).  Newer versions of VIPS make the process of converting digital slides into the Google Maps format much easier and much, much faster. John Cupitt has written an excellent summary guide here: Making DeepZoom, Zoomify and Google Maps image pyramids with vips.</p>
 
 <p>On Ubuntu or Mint, you can install with:</p>
 
 <pre><code>sudo apt-get install libvips
-sudo apt-get install libvips-tools
-</code></pre>
+sudo apt-get install libvips-tools</code></pre>
 
 <p>Once you have VIPS and all its dependencies installed, you can now convert a scanned slide by simply executing the command:</p>
 
-<pre><code>vips dzsave name_of_slide_file.svs name_of_output_directory.zip  --background 0 --centre --layout google
-</code></pre>
+<pre><code>vips dzsave name_of_slide_file.svs name_of_output_directory.zip  --background 0 --centre --layout google</code></pre>
 
 <p>This single line converts the slide, adds a black background, creates a Google Map tile set, and compresses it all into a zip file.  This zip file can then be uploaded to your public-facing web file server, expanded, and then used in your custom Google Maps code.   </p>
 
@@ -69,9 +67,7 @@ sudo apt-get install libvips-tools
 
 <pre><code>function customGetTileURL(a,b) {
     return "{{path to the slide directory}}/" + b + "/" + a.y + "/" + a.x + ".jpg"
-}```
-
-</code></pre>
+}</code></pre>
       </section>
     </div>
 
